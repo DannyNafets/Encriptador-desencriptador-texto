@@ -1,0 +1,141 @@
+body{
+    font-family: 'Open Sans', sans-serif;  
+    background: #E9ECF8;
+}
+
+.logo{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+
+}
+
+textarea{
+    background: #E9ECF8;
+    position: absolute;
+    width: 450px;
+    padding: 10px;
+    left: 220px;
+    top: 140px;
+    font-weight: 300;
+    font-size: 32px;
+    border: none;
+    color: #0A3871; 
+    resize: vertical;
+}
+
+.mostrar{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 40px 20px;
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    left: 850px;
+    top: 35px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 40px 0.5px #0A3871;
+}
+
+.muñeco{
+    display: absolute;
+    width: 80%;
+    padding: 130px 20px 20px 30px;
+
+}
+
+div h3{
+    font-weight: bold;
+    padding: 15px 40px;
+    text-align: center;
+}
+
+div p{
+    font-size: 12px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+/* estilo de botones de Encriptar y desencriptar*/
+
+.botones{
+    display: block;
+    position: absolute;
+    left: 220px;
+    top: 500px;
+}
+
+.botones label{
+    display: block;
+    font-size: 14px;
+    margin: 0 0 10px 0;
+}
+
+.encriptar{
+    margin: 0 15px 0 0;
+    width: 250px;
+    padding: 20px 0;
+    background: #0A3871;
+    border-radius: 20px;
+    color: white;
+}
+
+.desencriptar{
+    width: 250px;
+    padding: 20px 0;
+    position: fixed;
+    border-color: #0A3871;
+    border-radius: 20px;
+    color: #0A3871;
+}
+
+/* Boton copiar*/
+
+.copiar {
+    display: none;
+    margin: 0 0 15px 385px;
+    width: 250px;
+    padding: 20px 0;
+    position: fixed;
+    background: #0A3871;
+    border-radius: 20px;
+    color: white;
+}
+
+/* posicion y estilo de nube que muestra mensaje*/
+
+.copiar .copy-text{
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 2;
+    bottom: 115%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* posicion de la flecha de la nube*/
+
+.copiar .copy-text::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.copiar:hover .copy-text{
+    visibility: visible;
+    opacity: 1;
+}
