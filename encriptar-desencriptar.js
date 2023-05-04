@@ -6,7 +6,6 @@ function encriptar(){
     document.getElementById("mostrar").innerHTML=texto;
     text.value = "";
     document.getElementById("btn-copiar").style.display = "inline";
-
 }
 
 function encriptacion(textoEncriptado){
@@ -25,6 +24,7 @@ function desencriptar(){
     const texto = desencriptacion(text.value);
     document.getElementById("mostrar").innerHTML=texto;
     text.value = "";
+    document.getElementById("btn-copiar").style.display = "inline";
 }
 
 function desencriptacion(textoDesencriptado){
