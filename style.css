@@ -1,47 +1,54 @@
 body{
     font-family: 'Open Sans', sans-serif;  
-    background: #E9ECF8;
+    background-image: url("img/thumb-large-Paint_Damaged-2992.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .logo{
     position: absolute;
     top: 40px;
     left: 40px;
-
 }
 
 textarea{
-    background: #E9ECF8;
+    background: white;
     position: absolute;
     width: 450px;
+    height: 35px;
     padding: 10px;
     left: 220px;
     top: 140px;
     font-weight: 300;
-    font-size: 32px;
+    font-size: 26px;
     border: none;
     color: #0A3871; 
     resize: vertical;
+    border-radius: 20px;
 }
 
 .mostrar{
+    background-image: url("img/WoodDoor-2083.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    background: white;
-    padding: 40px 20px;
+    padding: 45px 30px;
     width: 250px;
-    height: 500px;
+    height: 550px;
     position: absolute;
     left: 850px;
-    top: 35px;
+    top: 15px;
     border-radius: 30px;
     box-shadow: 5px 5px 40px 0.5px #0A3871;
+    opacity: 90%;
+    color: #0A3871;
 }
 
 .muñeco{
     display: absolute;
     width: 80%;
-    padding: 130px 20px 20px 30px;
+    padding: 160px 20px 20px 30px;
 
 }
 
@@ -68,39 +75,54 @@ div p{
 
 .botones label{
     display: block;
-    font-size: 14px;
+    font-size: 12px;
     margin: 0 0 10px 0;
+    color: white;
 }
 
 .encriptar{
     margin: 0 15px 0 0;
-    width: 250px;
-    padding: 20px 0;
+    width: 258px;
     background: #0A3871;
-    border-radius: 20px;
     color: white;
+}
+
+.encriptar, .desencriptar{
+    padding: 20px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+}
+
+.encriptar:hover, .copiar:hover{
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 .desencriptar{
     width: 250px;
-    padding: 20px 0;
     position: fixed;
     border-color: #0A3871;
-    border-radius: 20px;
     color: #0A3871;
+}
+
+.desencriptar:hover{
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 /* Boton copiar*/
 
 .copiar {
     display: none;
-    margin: 0 0 15px 385px;
-    width: 250px;
-    padding: 20px 0;
+    margin: 10px 0 25px 423px;
+    width: 200px;
+    padding: 10px 0;
     position: fixed;
     background: #0A3871;
     border-radius: 20px;
     color: white;
+    border: none;
 }
 
 /* posicion y estilo de nube que muestra mensaje*/
