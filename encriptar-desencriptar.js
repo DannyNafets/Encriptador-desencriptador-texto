@@ -1,11 +1,38 @@
 const text = document.querySelector(".texto"); 
 const copiar = document.getElementById("btn-copiar")
 
+document.getElementById("textArea").addEventListener("keyup", validarTextoTiempoReal);
+
+function validarTextoTiempoReal() {
+	var campo = document.getElementById("textArea");
+    const textoEscrito = document.querySelector(".texto").value;
+    let validador = textoEscrito.match(/^[a-z]*$/);
+    if (!validador || validador === 0) {
+        campo.style.border = "solid 3px red";
+    }
+    else {
+        campo.style.border = "solid 3px green";
+    }
+}
+
+function validarTexto() {
+    const textoEscrito = document.querySelector(".texto").value;
+    let validador = textoEscrito.match(/^[a-z]*$/);
+
+    if(!validador || validador === 0) {
+        alert("Solo son permitidas letras minúsculas y sin acentos")
+        location.reload();
+        return true;
+    }
+}
+
 function encriptar(){
-    const texto = encriptacion(text.value);
-    document.getElementById("mostrar").innerHTML=texto;
-    text.value = "";
-    document.getElementById("btn-copiar").style.display = "inline";
+    if (!validarTexto()) {
+        const texto = encriptacion(text.value);
+        document.getElementById("mostrar").innerHTML=texto;
+        text.value = "";
+        document.getElementById("btn-copiar").style.display = "inline";
+    }
 }
 
 function encriptacion(textoEncriptado){
